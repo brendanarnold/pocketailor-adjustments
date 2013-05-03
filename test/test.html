@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test POST requests</title>
+
+    <script type="text/javascript">
+    
+    </script>
+
+    <style type="text/css">
+    
+    </style>
+
+  </head>
+  <body>
+
+    <h2>Local POST</h2>
+
+    <form action="http://localhost:3000" method="post">
+         <input type="text" name="pocketailor_adjustments_secret" value="testing_secret" /> <label>pocketailor_adjustments_secret</label>
+        <br/>
+        <textarea name="adjustment" rows="10" cols="50">
+{
+    "g": 0,
+    "b": 1,
+    "r": 1,
+    "a": -1,
+    "i": "sdfffd8766dasd7as7d7asd77a",
+    "c": 1,
+    "m": 1,
+    "v": 82.0,
+    "t": 1367424537150
+}
+        </textarea> <label>adjustment</label>
+        <br/>
+        <button type="submit">POST</button>
+    </form>
+
+    <h2>Production POST</h2>
+
+    <form action="https://pocketailor_adjustments.eu01.aws.af.cm/"  method="post">
+         <input type="text" name="pocketailor_adjustments_secret"
+         value="7f1f830c-18fa-4e49-af6f-5ea4c2c85f62" /> <label>pocketailor_adjustments_secret</label>
+        <br/>
+        <textarea name="adjustment" rows="10" cols="50">
+{
+    "g": 0,
+    "b": 1,
+    "r": 1,
+    "a": -1,
+    "i": "sdfffd8766dasd7as7d7asd77a",
+    "c": 1,
+    "m": 1,
+    "v": 82.0,
+    "t": 1367424537150
+}
+        </textarea> <label>adjustment</label>
+        <br/>
+        <button type="submit">POST</button>
+    </form>
+
+    
+
+    <h2>Tests</h2>
+
+    <h3>Production post No SSL</h3>
+
+    <form action="http://pocketailor_adustments.eu01.aws.af.cm/" method="post">
+         <input type="text" name="pocketailor_adjustments_secret" value="testing_secret" /> <label>pocketailor_adjustments_secret</label>
+        <br/>
+        <textarea name="adjustment" rows="10" cols="50">
+{
+    "g": 0,
+    "b": 1,
+    "r": 1,
+    "a": -1,
+    "i": "sdfffd8766dasd7as7d7asd77a",
+    "c": 1,
+    "m": 1,
+    "v": 82.0,
+    "t": 1367424537150
+}
+        </textarea> <label>adjustment</label>
+        <br/>
+        <button type="submit">POST</button>
+    </form>
+
+
+    <h3>Local post wrong secret</h3>
+
+    <form action="http://localhost:3000" method="post">
+         <input type="text" name="pocketailor_adjustments_secret" value="WRONG SECRET" /> <label>pocketailor_adjustments_secret</label>
+        <br/>
+        <textarea name="adjustment" rows="10" cols="50">
+{
+    "g": 0,
+    "b": 1,
+    "r": 1,
+    "a": -1,
+    "i": "sdfffd8766dasd7as7d7asd77a",
+    "c": 1,
+    "m": 1,
+    "v": 82.0,
+    "t": 1367424537150
+}
+        </textarea> <label>adjustment</label>
+        <br/>
+        <button type="submit">POST</button>
+    </form>
+
+  
+  </body>
+</html>
